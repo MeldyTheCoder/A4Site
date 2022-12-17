@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Ошибка сервера {% endblock %}
+
+{% block content%}
+<div class="page_intro">
+  <h1>На сервере произошла ошибка!</h1>
+  <p>Код ошибки: 500</p>
+  <button onclick="location.href='{{ url_for('main') }}'">Вернуться на главную</button>
+</div>
+{% endblock %}

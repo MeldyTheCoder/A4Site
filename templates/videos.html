@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Все видео {% endblock %}
+
+{% block content %}
+<div class="page_intro">
+    <h1>Последние 10 видео A4:</h1>
+    <p>Здесь отображены последние 10 видео легенды молодежи А4. Возможно, они покажутся Вам интересными, а главное образовательными.</p>
+</div>
+
+<div class="all_videos">
+
+{% for video in videos %}
+
+<div class="video">
+    <a href="{{ url_for('view_video', video_id=video['video_id']) }}">
+        <img src="{{ video['image'] }}">
+        <p>{{ video['title'] }}<!/p>
+    </a>
+</div>
+{% endfor %}
+
+</div>
+{% endblock%}

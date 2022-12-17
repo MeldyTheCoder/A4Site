@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Ничего не найдено {% endblock %}
+
+{% block content%}
+<div class="page_intro">
+  <h1>Увы, но по Вашему запросу ничего не найдено!</h1>
+  <p>Код ошибки: 404</p>
+  <button onclick="location.href='{{ url_for('main') }}'">Вернуться на главную</button>
+</div>
+{% endblock %}

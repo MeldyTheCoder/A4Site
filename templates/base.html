@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon.ico') }}" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>{% block title %} Заголовок Страницы {% endblock %}</title>
+</head>
+<body>
+<div class="header">
+    <img class="logo" src="{{ url_for('static', filename='logo.jpg') }}">
+  <a href="{{ url_for('main') }}" class="logo">
+      Сайт о Владе А4
+  </a>
+  <div class="header-right">
+    <a class="active" href="{{ url_for('main') }}">Главная</a>
+    <a href="{{ url_for('videos') }}">Видео</a>
+    <a href="{{ url_for('bio') }}">Биография</a>
+  </div>
+</div>
+{% block content%}
+Ничего не найдено!
+{% endblock %}
+<footer>
+    <div class="footer">
+        <img src="{{ url_for('static', filename='sunday_logo.jpg') }}">
+        <h1>Проектная работа</h1>
+        <p class="description">Данный сайт создан для ЧУПО ВШП, как проектная работа. Естесственно, тематика сайта была выбрана по рофлянчику.</p>
+        <div class="contact-section">
+            <div class="contact">
+                <a href="https://discordapp.com/users/483941569704099849">
+                   <i class='bx bxl-discord-alt'></i>
+                </a>
+            </div>
+            <div class="contact">
+                <a href="tg://user?id=1489252098">
+                   <i class='bx bxl-telegram'></i>
+                </a>
+            </div>
+            <div class="contact">
+                <a href="https://github.com/MeldyTheCoder">
+                    <i class='bx bxl-github'></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
